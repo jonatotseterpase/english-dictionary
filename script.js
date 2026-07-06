@@ -27,17 +27,13 @@ async function searchWord() {
         result.innerHTML = `
             <h2>${entry.word}</h2>
 
-            <p><strong>Pronunciation:</strong>
-            ${entry.phonetic || "Not available"}</p>
+            <p><strong>Pronunciation:</strong> ${entry.phonetic || "Not available"}</p>
 
-            <p><strong>Part of Speech:</strong>
-            ${meaning.partOfSpeech}</p>
+            <p><strong>Part of Speech:</strong> ${meaning.partOfSpeech}</p>
 
-            <p><strong>Meaning:</strong>
-            ${definition.definition}</p>
+            <p><strong>Meaning:</strong> ${definition.definition}</p>
 
-            <p><strong>Example:</strong>
-            ${definition.example || "No example available."}</p>
+            <p><strong>Example:</strong> ${definition.example || "No example available."}</p>
         `;
     } catch (error) {
         result.innerHTML =
