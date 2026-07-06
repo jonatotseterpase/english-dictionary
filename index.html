@@ -3,28 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Dictionary</title>
+
+<title>Jon's Smart Dictionary</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-<h1>📖 English Dictionary</h1>
-<p>Your trusted English learning companion.</p>
-</header>
 
-<main>
-<input type="text" id="word" placeholder="Search for any English word...">
-<button>Search</button>
+<nav>
+<h2>📖 Jon's Smart Dictionary</h2>
 
-<div id="result">
-<h2>Welcome!</h2>
-<p>Enter a word above and click <strong>Search</strong>.</p>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Dictionary</a></li>
+<li><a href="#">Word of the Day</a></li>
+<li><a href="#">Quiz</a></li>
+<li><a href="#">About</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<h1>Learn English the Smart Way</h1>
+
+<p>
+Search thousands of English words, discover their meanings,
+pronunciations, synonyms, antonyms and example sentences.
+</p>
+
+<input
+type="text"
+id="word"
+placeholder="Search for any English word..."
+>
+
+<button onclick="searchWord()">
+Search
+</button>
+
 </div>
 
-</main>
+</header>
+
+<section id="result">
+
+<h2>Welcome!</h2>
+
+<p>
+Start by typing an English word in the search box above.
+</p>
+
+</section>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
