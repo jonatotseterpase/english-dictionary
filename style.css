@@ -197,6 +197,18 @@ strong{
 }
 /* Common Mistakes Categories */
 /* Common Mistakes Categories */
+.categories{
+    max-width:900px;
+    margin:50px auto;
+    padding:20px;
+}
+
+.categories h2{
+    text-align:center;
+    color:#0056b3;
+    font-size:32px;
+    margin-bottom:25px;
+}
 
 .category-card{
     background:#fff;
