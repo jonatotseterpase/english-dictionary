@@ -196,28 +196,29 @@ strong{
     line-height:1.8;
 }
 /* Common Mistakes Categories */
+/* Common Mistakes Categories */
 
 .category-card{
-    background:white;
-    margin:15px auto;
-    padding:18px 20px;
-    border-radius:10px;
+    background:#fff;
+    margin:10px auto;
+    padding:14px 18px;
+    border-radius:14px;
     max-width:850px;
-    font-size:20px;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:0.3s;
     cursor:pointer;
-    transition:.3s;
 }
 
 .category-card:hover{
-    background:#0056b3;
-    color:white;
+    transform:translateY(-2px);
+    background:#f4f8ff;
 }
 
 .category-card span{
     float:right;
-    font-size:16px;
-    font-weight:normal;
+    font-size:14px;
+    color:#666;
+    font-weight:500;
 }
-
