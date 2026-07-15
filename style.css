@@ -273,3 +273,11 @@ strong{
 .back-home:hover {
   opacity: 0.8;
 }
+
+#result li {
+    color: #333;
+}
+
+#result li strong {
+    color: #0056b3;
+}
