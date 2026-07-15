@@ -211,17 +211,22 @@ strong{
 }
 
 .category-card{
-    background:#fff;
+    display:block;
+    background:#ffffff;
     color:#333;
-    margin:10px auto;
-    padding:14px 18px;
-    border-radius:14px;
+    margin:15px auto;
+    padding:20px;
+    border-radius:15px;
     max-width:850px;
-    font-size:18px;
+    font-size:20px;
     font-weight:600;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-    transition:0.3s;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+    transition:all .3s ease;
     cursor:pointer;
+    border-left:6px solid #0056b3;
+}
+
 }
 
 .category-card:hover{
