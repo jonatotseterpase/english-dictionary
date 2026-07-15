@@ -250,3 +250,8 @@ strong{
 .mistake-card p {
   line-height: 1.6;
 }
+.category-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
