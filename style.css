@@ -250,15 +250,12 @@ strong{
 .mistake-card p {
   line-height: 1.6;
 }
-.category-card {
-  text-decoration: none;
-  color: inherit;
-  display: block;
 }
+
 .category-card {
-  text-decoration: none;
-  color: inherit;
   display: block;
+  text-decoration: none;
+  color: #333333;
   cursor: pointer;
 }
 
