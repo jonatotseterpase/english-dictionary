@@ -301,3 +301,13 @@ strong{
 #result li strong {
     color: #0056b3;
 }
+
+.lesson-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.lesson-link:hover{
+    text-decoration:none;
+}
