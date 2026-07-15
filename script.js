@@ -10,9 +10,7 @@ async function searchWord() {
     result.innerHTML = "<p>🔍 Searching...</p>";
 
     try {
-        const response = await fetch(
-            `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-        );
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
 
         if (!response.ok) {
             throw new Error("Word not found");
@@ -21,22 +19,58 @@ async function searchWord() {
         const data = await response.json();
 
         const entry = data[0];
-        const meaning = entry.meanings[0];
-        const definition = meaning.definitions[0];
+
+        let phonetic = entry.phonetic || "Not available";
+
+        let audio = "";
+        const audioObj = entry.phonetics.find(p => p.audio);
+
+        if (audioObj) {
+            audio = `
+            <audio controls>
+                <source src="${audioObj.audio}" type="audio/mpeg">
+            </audio>`;
+        }
+
+        let meaningsHTML = "";
+
+        entry.meanings.forEach(meaning => {
+
+            meaningsHTML += `
+            <h3>${meaning.partOfSpeech}</h3>
+            <ol>
+            `;
+
+            meaning.definitions.forEach(def => {
+
+                meaningsHTML += `
+                <li>
+                    <strong>Meaning:</strong> ${def.definition}<br>
+
+                    ${def.example ? `<strong>Example:</strong> ${def.example}<br>` : ""}
+
+                    ${meaning.synonyms.length ? `<strong>Synonyms:</strong> ${meaning.synonyms.slice(0,5).join(", ")}<br>` : ""}
+                </li><br>
+                `;
+            });
+
+            meaningsHTML += "</ol>";
+        });
 
         result.innerHTML = `
             <h2>${entry.word}</h2>
 
-            <p><strong>Pronunciation:</strong> ${entry.phonetic || "Not available"}</p>
+            <p><strong>Pronunciation:</strong> ${phonetic}</p>
 
-            <p><strong>Part of Speech:</strong> ${meaning.partOfSpeech}</p>
+            ${audio}
 
-            <p><strong>Meaning:</strong> ${definition.definition}</p>
-
-            <p><strong>Example:</strong> ${definition.example || "No example available."}</p>
+            ${meaningsHTML}
         `;
+
     } catch (error) {
+
         result.innerHTML =
-            "<p>❌ Sorry, that word could not be found.</p>";
+        "<p>❌ Sorry, that word could not be found.</p>";
+
     }
 }
