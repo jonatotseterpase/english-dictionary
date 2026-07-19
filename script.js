@@ -64,11 +64,7 @@ async function searchWord() {
         result.innerHTML = `
             <h2>${entry.word}</h2>
 
-            <p><strong>Transcription:</strong> ${
-    entry.phonetic ||
-    (entry.phonetics.find(p => p.text)?.text) ||
-    "Not available"
-}</p>
+    <p><strong>Transcription:</strong> ${phonetic}</p>
 
 
             ${audio}
