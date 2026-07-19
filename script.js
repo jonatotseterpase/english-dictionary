@@ -50,9 +50,10 @@ if (entry.phonetic) {
         entry.meanings.forEach(meaning => {
 
             meaningsHTML += `
-            <h3>${meaning.partOfSpeech}</h3>
-            <ol>
-            `;
+    <h3 class="part-of-speech">${meaning.partOfSpeech}</h3>
+    <ol>
+`;
+
 
             meaning.definitions.forEach(def => {
 
