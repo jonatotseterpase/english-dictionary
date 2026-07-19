@@ -20,7 +20,11 @@ async function searchWord() {
 
         const entry = data[0];
 
-        let phonetic = entry.phonetic || "Not available";
+        let phonetic =
+    entry.phonetic ||
+    entry.phonetics.find(p => p.text)?.text ||
+    "Not available";
+
 
         let audio = "";
         const audioObj = entry.phonetics.find(p => p.audio);
