@@ -326,12 +326,24 @@ strong{
 
 #result h2{
     color:#0b63ce;
-    font-size:38px;
+    font-size:30px;
+
     margin-bottom:15px;
     text-transform:capitalize;
 }
 
 #result h3{
+    display:inline-block;
+    background:#ff9800;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:18px;
+    margin-top:20px;
+    margin-bottom:12px;
+    text-transform:capitalize;
+}
+
     color:#ff9800;
     margin-top:25px;
     font-size:24px;
