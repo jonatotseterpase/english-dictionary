@@ -20,10 +20,19 @@ async function searchWord() {
 
         const entry = data[0];
 
-        let phonetic =
-    entry.phonetic ||
-    entry.phonetics.find(p => p.text)?.text ||
-    "Not available";
+        let phonetic = "Not available";
+
+if (entry.phonetic) {
+    phonetic = entry.phonetic;
+} else if (entry.phonetics) {
+    for (const p of entry.phonetics) {
+        if (p.text) {
+            phonetic = p.text;
+            break;
+        }
+    }
+}
+
 
 
         let audio = "";
