@@ -424,3 +424,13 @@ audio{
     border-radius:8px;
 }
 
+.part-of-speech{
+    display:inline-block;
+    background:#ff9800;
+    color:#ffffff !important;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:18px;
+    font-weight:bold;
+    margin:20px 0 12px;
+}
