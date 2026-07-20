@@ -144,10 +144,17 @@ button{
 }
 
 #result h3{
-    color:#ff9800;
-    margin-top:25px;
-    margin-bottom:10px;
+    display:inline-block;
+    background:#ff9800;
+    color:#ffffff;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:18px;
+    font-weight:bold;
+    margin:20px 0 12px;
+    text-transform:capitalize;
 }
+
 
 #result ol{
     padding-left:25px;
