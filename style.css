@@ -503,3 +503,52 @@ audio{
     color:#ffffff;
     transform:translateY(-2px);
 }
+
+/* Search Section */
+
+.search-section{
+    background:#ffffff;
+    max-width:850px;
+    margin:40px auto;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.search-section h2{
+    color:#0b63ce;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.search-section p{
+    color:#666;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.search-section input{
+    width:90%;
+    max-width:500px;
+    padding:16px;
+    font-size:18px;
+    border:2px solid #d9e6f7;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.search-section button{
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.search-section button:hover{
+    background:#e68900;
+}
